@@ -15,8 +15,8 @@ a { color: inherit; }
 img { display: block; max-width: 100%; }
 button { font: inherit; }
 h1,h2,h3,p { margin-top: 0; }
-h1,h2,h3 { letter-spacing: -.055em; }
-p { line-height: 1.62; }
+h1,h2,h3 { letter-spacing: -.045em; }
+p { line-height: 1.7; }
 .page-width { width: min(100% - 96px, 1440px); margin-inline: auto; }
 .skip-link { position: absolute; z-index: 100; top: -70px; left: 16px; padding: 12px; background: white; }
 .skip-link:focus { top: 12px; }
@@ -38,7 +38,7 @@ p { line-height: 1.62; }
 .menu-button, .mobile-nav { display: none; }
 
 /* The service is visible in the first frame. */
-.hero { min-height: min(770px, calc(100svh - 84px)); position: relative; overflow: hidden; color: white; background: #193a3c; border-radius: 0 0 16px 16px; }
+.hero { min-height: min(710px, calc(100svh - 84px)); position: relative; overflow: hidden; color: white; background: #193a3c; border-radius: 0 0 16px 16px; }
 .hero-image, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-image { object-fit: cover; object-position: center 50%; }
 .hero-shade { background: linear-gradient(90deg, rgba(5,37,43,.93) 0%, rgba(6,41,47,.82) 35%, rgba(8,47,50,.28) 66%, rgba(7,32,35,.02) 100%); }
@@ -46,11 +46,11 @@ p { line-height: 1.62; }
 .hero-content { max-width: 880px; }
 .hero-overline { display: flex; align-items: center; gap: 11px; font-size: .83rem; font-weight: 600; margin-bottom: 30px; color: #d9e9e4; }
 .overline-mark { width: 21px; height: 1px; background: var(--mint); }
-.hero h1 { font-size: clamp(4rem, 6.35vw, 8.2rem); line-height: .99; font-weight: 500; margin-bottom: 30px; }
+.hero h1 { font-size: clamp(3.7rem, 5.4vw, 6.8rem); line-height: 1.05; font-weight: 500; margin-bottom: 30px; }
 .hero-content>p:not(.hero-overline) { font-size: clamp(1.05rem, 1.25vw, 1.26rem); color: #e4efea; max-width: 580px; margin-bottom: 38px; }
 .hero-links { display: flex; align-items: center; gap: 34px; flex-wrap: wrap; }
 .button { min-height: 57px; display: inline-flex; align-items: center; justify-content: space-between; gap: 35px; padding: 16px 20px; font-size: .84rem; font-weight: 700; text-decoration: none; border-radius: 8px; transition: transform .18s, background .18s; }
-.button:hover { transform: translateY(-2px); }
+.button:hover { transform: none; }
 .button-mint { background: var(--mint); color: var(--ink); }
 .button-mint:hover { background: #d2efe4; }
 .hero-contact { font-size: .84rem; font-weight: 650; text-decoration: none; border-bottom: 1px solid #a7c8bd; padding-bottom: 6px; }
@@ -60,7 +60,7 @@ p { line-height: 1.62; }
 .image-note { position: absolute; right: 22px; bottom: 17px; z-index: 2; font-size: .66rem; color: white; background: rgba(5,37,43,.64); padding: 6px 9px; border-radius: 5px; }
 
 .kicker { font-size: .77rem; font-weight: 700; color: #5d897d; margin-bottom: 21px; }
-h2 { font-size: clamp(2.5rem, 4.35vw, 5rem); font-weight: 500; line-height: 1.08; }
+h2 { font-size: clamp(2.3rem, 3.75vw, 4.3rem); font-weight: 500; line-height: 1.13; }
 h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
 
 .service-hub { padding: 104px 0 118px; background: var(--canvas); }
@@ -148,7 +148,7 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
   .desktop-nav { gap: 21px; }
   .desktop-nav a { font-size: .77rem; }
   .header-inner { gap: 25px; }
-  .hero h1 { font-size: clamp(4rem, 6.6vw, 6.5rem); }
+  .hero h1 { font-size: clamp(3.6rem, 5.8vw, 5.8rem); }
   .practice-grid { gap: 5%; }
 }
 @media (max-width: 790px) {
@@ -162,11 +162,11 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
   .mobile-nav { display: none; position: absolute; top: 70px; left: 0; right: 0; background: white; padding: 12px 20px 25px; border-bottom: 1px solid var(--line); box-shadow: 0 16px 20px #0e32371e; }
   .mobile-nav.is-open { display: grid; }
   .mobile-nav a { padding: 13px 0; border-bottom: 1px solid #ecf2ef; font-size: .93rem; font-weight: 600; text-decoration: none; }
-  .hero { min-height: 700px; }
+  .hero { min-height: 650px; }
   .hero-image { object-position: 62% center; }
   .hero-shade { background: linear-gradient(90deg, rgba(5,37,43,.94), rgba(5,37,43,.69) 66%, rgba(5,37,43,.35)); }
   .hero-inner { padding-top: 74px; padding-bottom: 96px; }
-  .hero h1 { font-size: clamp(3.9rem, 9vw, 5.8rem); }
+  .hero h1 { font-size: clamp(3.25rem, 7.8vw, 5rem); }
   .hero-side-note { display: none; }
   .service-hub, .care-section, .visit-section, .questions-section { padding: 83px 0 90px; }
   .hub-intro, .care-grid, .visit-heading, .visit-layout, .practice-grid, .questions-grid, .contact-grid { display: block; }
@@ -187,16 +187,16 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
   .footer-grid>div { grid-column: 1/-1; max-width: 400px; }
 }
 @media (max-width: 600px) {
-  .hero { min-height: 670px; }
+  .hero { min-height: 610px; }
   .hero-image { object-position: 66% center; }
   .hero-shade { background: linear-gradient(90deg, rgba(5,37,43,.91) 0%, rgba(5,37,43,.64) 60%, rgba(5,37,43,.32) 100%), linear-gradient(0deg, rgba(5,37,43,.35), transparent 50%); }
   .hero-inner { align-items: end; padding-top: 55px; padding-bottom: 80px; }
   .hero-overline { margin-bottom: 24px; }
-  .hero h1 { font-size: clamp(3.3rem, 11.2vw, 4.8rem); }
-  .hero-content>p:not(.hero-overline) { font-size: .99rem; max-width: 470px; }
+  .hero h1 { font-size: clamp(3rem, 9.1vw, 4.2rem); }
+  .hero-content>p:not(.hero-overline) { font-size: 1.03rem; line-height: 1.7; max-width: 470px; }
   .hero-links { gap: 25px; }
   .image-note { font-size: .6rem; right: 10px; bottom: 8px; }
-  h2 { font-size: clamp(2.3rem, 8vw, 3.4rem); }
+  h2 { font-size: clamp(2.1rem, 6.8vw, 3rem); }
   .service-hub, .care-section, .visit-section, .questions-section { padding: 70px 0 76px; }
   .hub-grid { display: block; }
   .hub-item, .hub-item+.hub-item { min-height: 0; padding: 22px 0 25px; border-left: 0; border-bottom: 1px solid #b8cfca; grid-template-columns: 1fr auto; }
@@ -209,7 +209,7 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
   .visit-photo { height: 310px; }
   .visit-steps li { padding: 20px 0 22px; }
   .practice-section { padding: 72px 0 82px; }
-  .practice-section h2 { font-size: 2.65rem; }
+  .practice-section h2 { font-size: 2.45rem; }
   .contact-section { padding: 72px 0 78px; }
   .footer-grid { display: block; }
   .footer-grid>p { margin: 25px 0 35px; }
