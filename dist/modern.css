@@ -313,3 +313,89 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
   .scope-list>div { grid-template-columns: 85px 1fr; gap: 10px; }
   .centres-contact { padding: 72px 0 78px; }
 }
+
+/* Dental care: open typography and service details, without invented clinical imagery. */
+.dental-hero { background: #f3f7f5; padding: 91px 0 104px; }
+.dental-hero-intro { display: grid; grid-template-columns: 1.17fr .72fr; gap: 12%; align-items: end; padding-bottom: 82px; }
+.dental-hero .kicker { margin-bottom: 30px; }
+.dental-hero h1 { max-width: 850px; font-size: clamp(3.9rem, 5.7vw, 6.8rem); line-height: 1.04; font-weight: 500; margin-bottom: 0; }
+.dental-hero-intro>div:last-child { padding-bottom: 10px; }
+.dental-hero-intro>div:last-child p { color: var(--ink-soft); font-size: 1.1rem; margin-bottom: 26px; }
+.dental-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; }
+.dental-hero-actions .button { min-height: 54px; }
+.dental-inline-link { font-size: .86rem; font-weight: 700; text-decoration: none; border-bottom: 1px solid #87ac9f; padding-bottom: 6px; }
+.dental-inline-link span { margin-left: 9px; }
+.dental-services { display: grid; grid-template-columns: 1fr 1fr .74fr; border-top: 1px solid #afcac0; border-bottom: 1px solid #afcac0; }
+.dental-services>div { min-height: 261px; padding: 29px 35px 30px 0; }
+.dental-services>div+div { border-left: 1px solid #afcac0; padding-left: 35px; }
+.service-index { display: block; font-size: .8rem; color: #639684; font-weight: 700; margin-bottom: 51px; }
+.dental-services h2 { font-size: clamp(1.7rem, 2vw, 2.45rem); margin-bottom: 11px; }
+.dental-services>div p { color: var(--ink-soft); font-size: .91rem; max-width: 390px; margin-bottom: 0; }
+.dental-services-note { border-left: 1px solid #afcac0; padding: 80px 0 20px 35px; margin: 0; font-size: .82rem; color: #5d7772; }
+
+.dental-visit { padding: 121px 0 132px; }
+.dental-visit-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 13%; }
+.dental-visit-intro h2 { max-width: 530px; }
+.dental-visit-intro>p:last-child { max-width: 465px; color: var(--ink-soft); }
+.dental-visit-stages { border-top: 1px solid var(--line); }
+.dental-visit-stages>div { display: grid; grid-template-columns: 88px 1fr; gap: 14px 25px; padding: 30px 0 32px; border-bottom: 1px solid var(--line); }
+.dental-visit-stages>div span { grid-row: 1 / 3; color: #6ca08f; font-size: .84rem; font-weight: 700; padding-top: 4px; }
+.dental-visit-stages h3 { margin: 0; }
+.dental-visit-stages p { grid-column: 2; color: var(--ink-soft); font-size: .93rem; margin: 0; max-width: 480px; }
+
+.dental-further { background: var(--ink); color: white; padding: 119px 0 126px; }
+.dental-further-grid { display: grid; grid-template-columns: 1fr .8fr; gap: 15%; align-items: end; }
+.dental-further .kicker { color: #a3d0bf; }
+.dental-further h2 { max-width: 660px; margin-bottom: 0; }
+.dental-further-grid>div:last-child { padding-bottom: 10px; }
+.dental-further-grid>div:last-child p { color: #d0e1db; font-size: 1.02rem; margin-bottom: 20px; }
+.dental-further-grid>div:last-child a { display: inline-block; margin-top: 15px; color: white; font-size: .87rem; font-weight: 700; text-underline-offset: 6px; }
+.dental-further-grid>div:last-child a span { margin-left: 9px; }
+
+.dental-questions { background: #e4f1ec; padding: 113px 0 123px; }
+.dental-questions-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: 13%; }
+.dental-questions h2 { max-width: 570px; }
+.dental-questions-grid>div:first-child>p:not(.kicker) { max-width: 480px; color: var(--ink-soft); }
+.dental-contact-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 31px; }
+.dental-contact-actions>a:last-child { font-size: .88rem; font-weight: 700; text-underline-offset: 5px; }
+.dental-faq { border-top: 1px solid #a5c9bc; }
+.dental-faq details { border-bottom: 1px solid #a5c9bc; }
+.dental-faq summary { list-style: none; display: flex; justify-content: space-between; align-items: start; gap: 20px; padding: 25px 0; cursor: pointer; font-size: 1.06rem; font-weight: 600; }
+.dental-faq summary::-webkit-details-marker { display: none; }
+.dental-faq summary span { font-size: 1.3rem; line-height: 1; font-weight: 400; color: #498a73; }
+.dental-faq details[open] summary span { transform: rotate(45deg); }
+.dental-faq details p { max-width: 570px; color: var(--ink-soft); font-size: .94rem; margin: 0 0 27px; }
+
+@media (max-width: 1100px) {
+  .dental-hero-intro { gap: 8%; }
+  .dental-hero h1 { font-size: clamp(3.5rem, 5.7vw, 5.7rem); }
+  .dental-services { grid-template-columns: 1fr 1fr .85fr; }
+}
+@media (max-width: 790px) {
+  .dental-hero { padding: 78px 0 84px; }
+  .dental-hero-intro, .dental-visit-grid, .dental-further-grid, .dental-questions-grid { display: block; }
+  .dental-hero h1 { font-size: clamp(3.55rem, 7.5vw, 5.2rem); }
+  .dental-hero-intro>div:last-child { max-width: 620px; margin-top: 32px; }
+  .dental-hero-intro { padding-bottom: 53px; }
+  .dental-services { grid-template-columns: 1fr 1fr; }
+  .dental-services-note { grid-column: 1/-1; border-left: 0; border-top: 1px solid #afcac0; padding: 18px 0 20px; }
+  .dental-services>div { min-height: 230px; }
+  .dental-visit, .dental-further, .dental-questions { padding: 86px 0 94px; }
+  .dental-visit-stages, .dental-faq { margin-top: 45px; }
+  .dental-further-grid>div:last-child { margin-top: 37px; max-width: 590px; }
+}
+@media (max-width: 600px) {
+  .dental-hero { padding: 61px 0 69px; }
+  .dental-hero h1 { font-size: clamp(3rem, 9vw, 4.2rem); }
+  .dental-hero-intro>div:last-child p { font-size: 1.02rem; }
+  .dental-hero-actions { align-items: flex-start; flex-direction: column; gap: 21px; }
+  .dental-services { display: block; }
+  .dental-services>div, .dental-services>div+div { min-height: 0; padding: 25px 0 27px; border-left: 0; border-bottom: 1px solid #afcac0; }
+  .service-index { margin-bottom: 26px; }
+  .dental-services h2 { font-size: 1.84rem; }
+  .dental-services-note { border-top: 0; }
+  .dental-visit, .dental-further, .dental-questions { padding: 73px 0 79px; }
+  .dental-visit-stages>div { grid-template-columns: 69px 1fr; gap: 10px 14px; }
+  .dental-visit-stages h3 { font-size: 1.2rem; }
+  .dental-contact-actions { align-items: flex-start; flex-direction: column; }
+}
