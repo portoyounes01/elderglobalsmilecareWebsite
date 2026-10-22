@@ -16,7 +16,7 @@
   --font-serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 body { margin: 0; color: var(--ink); background: var(--white); font-family: var(--font); -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
