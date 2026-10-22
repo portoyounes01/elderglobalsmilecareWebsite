@@ -1,5 +1,9 @@
 {
   "version": 2,
   "outputDirectory": "dist",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    { "source": "/portal", "destination": "/portal/index.html" },
+    { "source": "/portal/(.*)", "destination": "/portal/$1" }
+  ]
 }
