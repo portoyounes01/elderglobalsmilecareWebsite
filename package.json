@@ -1,0 +1,9 @@
+{
+  "name": "globalsmilecare-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:portal": "cd portal-src && npm install && npm run build && mkdir -p ../dist/portal && cp -r dist/. ../dist/portal/",
+    "build": "npm run build:portal"
+  }
+}

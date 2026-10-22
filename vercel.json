@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd portal-src && npm install && npm run build && mkdir -p ../dist/portal && cp -r dist/. ../dist/portal/",
+  "outputDirectory": "dist",
+  "framework": null
+}
