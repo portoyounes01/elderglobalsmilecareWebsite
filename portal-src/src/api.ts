@@ -15,8 +15,8 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
 
 export const portalApi = {
   token: () => localStorage.getItem(TOKEN_KEY),
-  login: async (username: string, password: string) => {
-    const result = await request<{ access_token: string }>("/portal/auth/login", { method: "POST", body: JSON.stringify({ username, password }) });
+  login: async (email: string, password: string) => {
+    const result = await request<{ access_token: string }>("/portal/auth/login", { method: "POST", body: JSON.stringify({ email, password }) });
     localStorage.setItem(TOKEN_KEY, result.access_token);
   },
   me: () => request<PortalMe>("/portal/me"),

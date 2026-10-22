@@ -61,7 +61,7 @@ function dateLabel(value: string) {
 }
 
 function PortalLogin({ onLogin }: { onLogin: () => Promise<void> }) {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -72,7 +72,7 @@ function PortalLogin({ onLogin }: { onLogin: () => Promise<void> }) {
   useEffect(() => { portalApi.demoCentres().then(setDemoCentres).catch(() => setDemoCentres([])); }, []);
 
   const matches = demoCentres.filter((c) =>
-    `${c.name} ${c.city} ${c.username}`.toLowerCase().includes(search.toLowerCase())
+    `${c.name} ${c.city} ${c.email}`.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -91,7 +91,7 @@ function PortalLogin({ onLogin }: { onLogin: () => Promise<void> }) {
           e.preventDefault();
           setError("");
           setLoading(true);
-          try { await portalApi.login(username, password); await onLogin(); }
+          try { await portalApi.login(email, password); await onLogin(); }
           catch (err) { setError(err instanceof Error ? err.message : "Aanmelden mislukt."); }
           finally { setLoading(false); }
         }}>
@@ -106,8 +106,8 @@ function PortalLogin({ onLogin }: { onLogin: () => Promise<void> }) {
               </label>
               <div className="portal-demo-options">
                 {matches.slice(0, 6).map((c) => (
-                  <button type="button" key={c.username} className={username === c.username ? "selected" : ""}
-                    onClick={() => { setUsername(c.username); setSelected(c.name); setSearch(c.city); }}>
+                  <button type="button" key={c.email} className={email === c.email ? "selected" : ""}
+                    onClick={() => { setEmail(c.email); setSelected(c.name); setSearch(c.city); }}>
                     <span><strong>{c.name}</strong><small>{c.city}</small></span>
                     <IconChevron />
                   </button>
@@ -119,9 +119,9 @@ function PortalLogin({ onLogin }: { onLogin: () => Promise<void> }) {
             </div>
           )}
 
-          <label>Gebruikersnaam
-            <input autoComplete="username" value={username}
-              onChange={(e) => { setUsername(e.target.value); setSelected(""); }} required />
+          <label>E-mailadres
+            <input type="email" autoComplete="email" value={email}
+              onChange={(e) => { setEmail(e.target.value); setSelected(""); }} required />
           </label>
           <label>Wachtwoord
             <input type="password" autoComplete="current-password" value={password}
@@ -189,7 +189,7 @@ export function PortalApp() {
             <div className="portal-avatar">{me.wzc_name.slice(0, 1)}</div>
             <div>
               <strong title={me.wzc_name}>{me.wzc_name}</strong>
-              <small title={me.username}>{me.username}</small>
+              <small title={me.email}>{me.email}</small>
             </div>
           </div>
           <button className="portal-switch" onClick={switchCentre}>Afmelden</button>
