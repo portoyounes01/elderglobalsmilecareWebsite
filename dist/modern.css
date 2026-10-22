@@ -137,12 +137,14 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
 .button-dark:hover { background: #27535a; }
 .contact-options>a:not(.button) { font-size: .86rem; font-weight: 700; text-underline-offset: 5px; }
 .site-footer { background: #09272d; color: #d7e8e1; padding: 58px 0 35px; }
-.footer-grid { display: grid; grid-template-columns: 1fr 1.2fr .8fr; gap: 40px; }
+.footer-grid { display: grid; grid-template-columns: .8fr 1fr 1.45fr; gap: 52px; }
 .footer-brand strong { color: #b9dfd0; }
 .footer-brand small { color: #a7c9bc; }
 .footer-grid>p { max-width: 370px; font-size: .84rem; }
-.footer-grid>div { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; align-content: start; font-size: .81rem; }
-.footer-grid>div a { text-decoration: none; }
+.footer-links { display: grid; grid-template-columns: 1.2fr .85fr .85fr; gap: 30px; align-content: start; font-size: .81rem; }
+.footer-links>div { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.footer-links span { color: #76a99b; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 5px; }
+.footer-links a { text-decoration: none; }
 .footer-grid>small { grid-column: 1/-1; border-top: 1px solid #365961; padding-top: 25px; font-size: .73rem; color: #9cb9b4; }
 
 @media (max-width: 1100px) {
@@ -187,7 +189,7 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
   .questions-grid>div:first-child { margin-bottom: 45px; }
   .contact-options { margin-top: 38px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .footer-grid>div { grid-column: 1/-1; max-width: 400px; }
+  .footer-links { grid-column: 1/-1; max-width: 680px; margin-top: 8px; }
 }
 @media (max-width: 600px) {
   .hero-inner { padding: 55px 20px 62px; }
@@ -212,8 +214,13 @@ h3 { font-size: 1.4rem; font-weight: 600; line-height: 1.25; }
   .contact-section { padding: 72px 0 78px; }
   .footer-grid { display: block; }
   .footer-grid>p { margin: 25px 0 35px; }
-  .footer-grid>div { margin-bottom: 35px; }
+  .footer-links { margin-bottom: 35px; }
   .footer-grid>small { display: block; }
+}
+
+@media (max-width: 480px) {
+  .footer-links { grid-template-columns: 1fr 1fr; gap: 35px 25px; }
+  .footer-links>div:last-child { grid-column: 1 / -1; }
 }
 
 /* Legal pages: readable policy text with clear scanning anchors. */
