@@ -15,3 +15,20 @@ mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', 
 }));
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+document.getElementById('enquiry-form')?.addEventListener('submit', event => {
+  event.preventDefault();
+  const form = new FormData(event.currentTarget);
+  const lines = [
+    'Hello Global Smile Care,', '',
+    'I would like to discuss dental care for our residential care centre.', '',
+    `Name: ${form.get('name') || ''}`,
+    `Role: ${form.get('role') || ''}`,
+    `Organisation: ${form.get('organisation') || ''}`,
+    `Work email: ${form.get('email') || ''}`,
+    `Telephone: ${form.get('phone') || ''}`, '',
+    'How can you help?',
+    `${form.get('message') || 'I would like to arrange an introductory conversation.'}`
+  ];
+  window.location.href = `mailto:info@globalsmilecare.be?subject=${encodeURIComponent('Care-centre dental service enquiry')}&body=${encodeURIComponent(lines.join('\n'))}`;
+});
